@@ -102,4 +102,18 @@ public class ResultTest {
 
     }
 
+    /* @DisplayName("#7 Array size is same size as amount of grades")
+    @Test
+    void testGradingStudents_ArraySizeIsSameSizeAsAmountOfGrades() {
+        List<Integer> grades = Arrays.asList(6, 44, 89, 12, 56, 34, 45);
+
+        List<Integer> actual = Result.gradingStudents(grades);
+
+        int expected = grades.get(0);
+
+        assertEquals(expected, actual.size() - 1);
+
+    }
+*/
+
 }

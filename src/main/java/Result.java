@@ -8,6 +8,7 @@ public class Result {
     public static List<Integer> gradingStudents(List<Integer> grades) {
         List<Integer> modification = new ArrayList<>();
 
+
         if (grades.get(0) > 60 || grades.get(0) < 1) {
             System.out.println("Out of Range");
             return new ArrayList<>();
@@ -36,13 +37,13 @@ public class Result {
                 System.out.println("Grade out of range");
 
             }
+
         }
+
+
 
         return modification;
     }
-
-
-
 
     public static void main(String[] args) throws IOException {
 
