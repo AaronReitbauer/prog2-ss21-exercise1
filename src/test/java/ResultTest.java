@@ -89,5 +89,17 @@ public class ResultTest {
 
     }
 
+    @DisplayName("#6 Grade lower than 38 is unchanged")
+    @Test
+    void testGradingStudents_GradeLowerThan38IsUnchanged() {
+        List<Integer> grades = Arrays.asList(4, 12, 56, 20, 1);
+
+        List<Integer> actual = Result.gradingStudents(grades);
+
+        List<Integer> expected = Arrays.asList(12, 56, 20, 1);
+
+        assertEquals(expected, actual);
+
+    }
 
 }
