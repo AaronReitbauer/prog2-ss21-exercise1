@@ -13,27 +13,28 @@ public class Result {
             return new ArrayList<>();
         }
 
+
         for (int i=1; i<grades.size(); i++) {
-           if (grades.get(i) >= 38) {
+            if (grades.get(i) >= 0 && grades.get(i) <= 100) {
+                if (grades.get(i) >= 38) {
 
+                    if ((grades.get(i) + 1) % 5 == 0) {
+                        modification.add(grades.get(i) + 1);
 
-               if ((grades.get(i) + 1) % 5 == 0) {
-                   modification.add(grades.get(i) + 1);
+                    } else if ((grades.get(i) + 2) % 5 == 0) {
+                        modification.add(grades.get(i) + 2);
 
-               } else if ((grades.get(i) + 2) % 5 == 0) {
-                   modification.add(grades.get(i) + 2);
+                    } else {
+                        modification.add(grades.get(i));
+                    }
 
-               }
-               else {
-                   modification.add(grades.get(i));
-               }
+                } else {
+                    modification.add(grades.get(i));
+                }
+            } else {modification.add(null);
 
-           }
-           else {
-               modification.add(grades.get(i));
-           }
+            }
         }
-
 
         return modification;
     }

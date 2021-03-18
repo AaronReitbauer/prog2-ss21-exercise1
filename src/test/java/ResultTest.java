@@ -25,7 +25,7 @@ public class ResultTest {
 
     }
 
-    @DisplayName("#1 Basic logic ")
+    @DisplayName("#1 Basic logic")
     @Test
     void testGradingStudents_basicLogic() {
         List<Integer> grades = Arrays.asList(4, 73, 67, 38, 33);
@@ -63,8 +63,18 @@ public class ResultTest {
 
     }
 
+    @DisplayName("#4 Size of grade too low")
+    @Test
+    void testGradingStudents_() {
+        List<Integer> grades = Arrays.asList(4, -5, 67, 38, 33);
 
+        List<Integer> actual = Result.gradingStudents(grades);
 
+        List<Integer> expected = Arrays.asList(null, 67, 40, 33);
+
+        assertEquals(expected, actual);
+
+    }
 
 
 }
