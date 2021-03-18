@@ -31,7 +31,9 @@ public class Result {
                 } else {
                     modification.add(grades.get(i));
                 }
-            } else {modification.add(null);
+            } else {
+                modification.add(null);
+                System.out.println("Grade out of range");
 
             }
         }

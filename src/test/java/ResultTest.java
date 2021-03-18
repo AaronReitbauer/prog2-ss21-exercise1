@@ -65,8 +65,21 @@ public class ResultTest {
 
     @DisplayName("#4 Size of grade too low")
     @Test
-    void testGradingStudents_() {
+    void testGradingStudents_sizeOfGradeTooLow() {
         List<Integer> grades = Arrays.asList(4, -5, 67, 38, 33);
+
+        List<Integer> actual = Result.gradingStudents(grades);
+
+        List<Integer> expected = Arrays.asList(null, 67, 40, 33);
+
+        assertEquals(expected, actual);
+
+    }
+
+    @DisplayName("#5 Size of grade too high")
+    @Test
+    void testGradingStudents_SizeofGradeTooHigh() {
+        List<Integer> grades = Arrays.asList(4, 166, 67, 38, 33);
 
         List<Integer> actual = Result.gradingStudents(grades);
 
