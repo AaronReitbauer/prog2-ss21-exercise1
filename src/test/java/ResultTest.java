@@ -25,9 +25,9 @@ public class ResultTest {
 
     }
 
-    @DisplayName("#1 Size of first parameter too high")
+    @DisplayName("#1 Basic logic ")
     @Test
-    void testGrade() {
+    void testGradingStudents_basicLogic() {
         List<Integer> grades = Arrays.asList(4, 73, 67, 38, 33);
 
         List<Integer> actual = Result.gradingStudents(grades);
@@ -49,6 +49,22 @@ public class ResultTest {
         assertEquals(expected, actual);
 
     }
+
+    @DisplayName("#3 Size of first parameter too low")
+    @Test
+    void testGradingStudents_sizeOfFirstParameterTooLow() {
+        List<Integer> grades = Arrays.asList(-1, 73, 67, 38, 33);
+
+        List<Integer> actual = Result.gradingStudents(grades);
+
+        List<Integer> expected = new ArrayList<>();
+
+        assertEquals(expected, actual);
+
+    }
+
+
+
 
 
 }
