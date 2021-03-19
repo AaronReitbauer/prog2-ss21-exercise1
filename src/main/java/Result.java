@@ -15,7 +15,7 @@ public class Result {
         }
 
 
-        for (int i=1; i<grades.size(); i++) {
+        for (int i = 1; i < grades.size(); i++) {
             if (grades.get(i) >= 0 && grades.get(i) <= 100) {
                 if (grades.get(i) >= 38) {
 
@@ -40,9 +40,8 @@ public class Result {
 
         }
 
-
-
         return modification;
+
     }
 
     public static void main(String[] args) throws IOException {
@@ -50,20 +49,15 @@ public class Result {
         Scanner input = new Scanner(System.in);
         int studentsCount = input.nextInt();
 
-        List<Integer> grades = new ArrayList<Integer>(studentsCount);
-
+        List<Integer> grades = new ArrayList<>(studentsCount);
+        grades.add(studentsCount);
         for (int i = 0; i < studentsCount; i++) {
             int stud = input.nextInt();
             grades.add(stud);
 
-
         }
 
-        for (int i = 0; i < grades.size(); i++) {
-            System.out.println(grades.get(i));
-
-        }
-
+            System.out.println(gradingStudents(grades));
 
     }
 

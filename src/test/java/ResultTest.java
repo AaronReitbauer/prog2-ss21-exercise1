@@ -10,7 +10,6 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 public class ResultTest {
 
 
@@ -25,7 +24,7 @@ public class ResultTest {
 
     }
 
-    @DisplayName("#1 Basic logic")
+  @DisplayName("#1 Basic logic")
     @Test
     void testGradingStudents_basicLogic() {
         List<Integer> grades = Arrays.asList(4, 73, 67, 38, 33);
@@ -116,4 +115,29 @@ public class ResultTest {
     }
 */
 
+    @DisplayName("#8 grades without rounding correct")
+    @Test
+    void testGradingStudents_gradesWithoutRoundingCorrect() {
+        List<Integer> grades = Arrays.asList(4, 12, 56, 76, 62);
+
+        List<Integer> actual = Result.gradingStudents(grades);
+
+        List<Integer> expected = Arrays.asList(12, 56, 76, 62);
+
+        assertEquals(expected, actual);
+
+    }
+
+    @DisplayName("#9 grades rounded correctly")
+    @Test
+    void testGradingStudents_gradesRoundedCorrectly() {
+        List<Integer> grades = Arrays.asList(4, 44, 58, 78, 63);
+
+        List<Integer> actual = Result.gradingStudents(grades);
+
+        List<Integer> expected = Arrays.asList(45, 60, 80, 65);
+
+        assertEquals(expected, actual);
+
+    }
 }
